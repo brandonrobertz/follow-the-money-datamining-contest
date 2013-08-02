@@ -1,0 +1,12 @@
+These programs were written for linux (particularly the shell scripts). Some of these might work with a slight modification with GNU coreutils for win:
+
+ 1) http://gnuwin32.sourceforge.net/packages/coreutils.htm
+ 
+You'll also need sed, wget and findutils:
+
+ 2) http://gnuwin32.sourceforge.net/packages/sed.htm
+ 3) http://gnuwin32.sourceforge.net/packages/findutils.htm
+ 4) http://gnuwin32.sourceforge.net/packages/wget.htm
+
+ 
+I haven't tested the scripts in windows so you're on your own. If all else fails, you can copy and paste the individual lines to cmd.exe once you've installed the above.
