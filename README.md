@@ -9,13 +9,16 @@ This was my entry to the CIR/IRE's Kaggle "follow the money" datamining contest.
 
 2) Pull your candidate / contributor data from DB. This assume you're using a DB formatted like the FEC Campaign Finance CSV files. breakdown.py will convert it into a WEKA readable ARFF (use "-f" aka "--arff") 
 
-    # This particular example is outputting all of Al Franken's contributors, grouped by occupation 
+    # This particular example is outputting all of Al Franken's contributors,
+    # grouped by occupation 
     ./breakdown.py -o -f -v "Franken, Al" out.arff
 
     # This will output all contributors to all candidates into an arff file.
     ./ breakdown.py -f -v all allCandidates.arff
 
-    # This is literally a hack (SQL injection, I was running out of time here), but you can do multiple candidates in a competing race (and whether they won/lost) the following way:
+    # This is literally a hack (SQL injection, I was running out of time here),
+    # but you can do multiple candidates in a competing race (and whether they
+    # won/lost) the following way:
     ./breakdown.py -f -v -w 'Franken, Al" or candidate_name="Coleman, Norm' franken.coleman.2008.contributors.arff
 
 3) Convert the outputted string fields in out.arff to a numeric format. transform.py will do this. You can edit the file to change where your WEKA install is & options.
@@ -32,4 +35,4 @@ What this leaves you with is an ARFF file with each instance representing every 
 
 1) Luckily this tool does all the work for you (again, a more up to date, cleaner CSV-based version of this code can be found at https://github.com/brandonrobertz/SenateVotingRecord2CSV)
 
-    ./senatevotes2arff.py First Last 111 1 ./senate_xml/ SenatorFirstLastSenateVotesSenate111Session1.arff
+    ./senatevotes2arff.py First Last 111 1 ./senate_xml/ FirstLastVotesSenate111Session1.arff
